@@ -1,5 +1,7 @@
 from collections import defaultdict
 #O(V*(E+V)) = O(EV)
+# V-1 times relax all edges.
+# if Vth times relaxing results in a change then there is a negative weight cycle.
 class Graph:
     def __init__(self,V):
         self.V=V
@@ -13,7 +15,6 @@ class Graph:
         distances[src]=0
 
         for i in range(len(self.V)-1):
-                #
                 for u,d in self.edges.items():
                     for v,w in d.items():
                         if distances[u]+w < distances[v]:

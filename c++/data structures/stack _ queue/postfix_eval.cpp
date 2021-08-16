@@ -14,12 +14,13 @@ void push(Stack* ,int);
 
 
 int main(){
+    cout<<"letssee";
     Stack* s=(Stack*)malloc(sizeof(Stack));
     if(!s){//malloc returns NULL
         printf("Error!");
         exit(0);
     }
-
+    
     s->array=(int*)malloc(sizeof(int)*20);
 
     if(!(s->array)){

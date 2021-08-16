@@ -90,7 +90,7 @@ class minheap:
 
         while(vpos>0 and self.A[vpos].dist < self.A[(vpos-1)//2].dist):
             self.swappos(vpos,(vpos-1)//2)
-            self.swapnode(vpos,(vpos-1)/2)
+            self.swapnode(vpos,(vpos-1)//2)
             vpos=(vpos-1)//2
 
 
@@ -123,7 +123,6 @@ class Graph:
         while(not distances.isempty()):
             g=distances.extract_min()
             cur_v,curdist=g.v,g.dist
-            
             for neighbour in self.edges[cur_v]:
                 #check if any neighbour has already been finalised. dont update it
                 n_dist=distances.A[distances.pos[neighbour]].dist

@@ -10,7 +10,7 @@
 
 public class Test1 {
     public static void main (String args[] ) {
-        int N = (int)Math.pow(2,12);
+        int N = (int)Math.pow(2,10);
         int M = 100000;
         int[][] boxes=new int[N][];
         for(int i =0; i< N; i++) {

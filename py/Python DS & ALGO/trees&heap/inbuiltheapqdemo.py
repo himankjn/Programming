@@ -1,6 +1,4 @@
 import heapq
-from os import O_NDELAY
-
 li=[5,7,9,4,3]
 
 """Min Heap
@@ -37,6 +35,7 @@ class node():
             return self.two<other.two 
         else:
             return self.one<other.one
+
 triplets=[node(1,2,3),node(1,4,4),node(7,3,8),node(9,2,4),node(8,7,1)]
 
 heapq.heapify(triplets)

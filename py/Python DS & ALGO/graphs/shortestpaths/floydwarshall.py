@@ -21,10 +21,9 @@ class Graph:
 
 
 E=[[0, 5, INF, 10],
-         [INF, 0, 3, INF],
-         [INF, INF, 0,   1],
-         [INF, INF, INF, 0]
-         ]
+[INF, 0, 3, INF],
+[INF, INF, 0,   1],
+[INF, INF, INF, 0]]
 G=Graph(E)
 
 print(G.floydwarshall())
