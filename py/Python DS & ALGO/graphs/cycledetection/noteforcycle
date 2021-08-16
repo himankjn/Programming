@@ -1,0 +1,13 @@
+# Cycle can be detected using following:
+
+Note: an easy way for any graph cycle detection is to do floyd warshall with initially dist[i,i]= inf and find dist[i,i] for each vertex i in the last matrix
+
+1) Undirected graph:
+   #if visited[neighbour] and parent!=neigbour then cycle.
+ * DFS :keep  parent variable. with every dfs send parent arguement as current vertex
+ * BFS : keep parent dictionary.
+ * Disjoint Set: for every edge if both vertex in same set then cycle, else union them
+
+2) Directed Graph:
+ * DFS: use visited dict and stack dict. if a neigbour is visited and also in stack then cycle
+ * BFS: (little complex)
