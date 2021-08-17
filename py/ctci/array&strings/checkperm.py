@@ -16,6 +16,5 @@ def perm(s1,s2):
     else:
         return False
 
-#
 print(perm(s1,s2))
 
