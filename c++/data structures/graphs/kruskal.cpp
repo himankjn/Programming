@@ -7,6 +7,7 @@ using namespace std;
 class Edge{
     public:
     int src,dest,wt;
+
 };
 
 class dis_set{// disjoint set
