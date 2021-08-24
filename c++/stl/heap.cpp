@@ -1,4 +1,4 @@
-/*Heap in c++
+/*Heap in c++ 
 1) priorityqueue<int> q;    //max heap of int
 2) priorityqueue<int,vector<int>,greater<int>> q;  //min heap of ints
 3) priorityquque<node, vector<node>, mycomp> q;    //max heap of nodes compared based on mycomp
