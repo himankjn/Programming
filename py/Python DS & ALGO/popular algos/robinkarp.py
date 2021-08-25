@@ -1,7 +1,7 @@
 #string matching is a popular problem
 # give string a,b find if b is a substring of a
 #normal brute force would be O(n*m)
-# Robin karp gives O(n)
+# Robin karp gives O(n). It essentially represents substring as an binary number/integer. which helps us compute the next sliding window in just O(1) using previous sliding window.
 #if the string is english characters: replace the base 2 by base 26
 #Algorthm: keep a sliding window and return true if match is found. The sliding window update takes only O(1) unlike O(m) in brute force case.
 
@@ -48,6 +48,6 @@ def robinkarp(a,b):
 
 print(robinkarp(a,b))
     
-#Note: if the substring b is greater than 2^64 then we cant store it even in a float variable. Then we can use a modulo with a prime number.
+#Note: if the substring b is greater than 2^64 then we cant store it even in a float variable. Then we can use a modulo with a prime number. This technique is essentially hashing
 # If the prime number is q. then prob of collision is (1/q). For n iterations, expected no. of collision = (n/q)
 # each collision we check if match is there brute forces. Therefore total expected complexity= O(n * (n/q)) where (n/q) is almost constant for large q.
