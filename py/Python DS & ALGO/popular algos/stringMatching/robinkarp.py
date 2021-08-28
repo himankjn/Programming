@@ -1,7 +1,7 @@
 #string matching is a popular problem
 # give string a,b find if b is a substring of a
 #normal brute force would be O(n*m)
-# Robin karp gives O(n). It essentially represents substring as an binary number/integer. which helps us compute the next sliding window in just O(1) using previous sliding window.
+# Robin karp gives O(n).It used sliding window protocol to calculate hash value. It essentially represents substring as an binary number/integer. which helps us compute the next sliding window in just O(1) using previous sliding window.
 #if the string is english characters: replace the base 2 by base 26
 #Algorthm: keep a sliding window and return true if match is found. The sliding window update takes only O(1) unlike O(m) in brute force case.
 
