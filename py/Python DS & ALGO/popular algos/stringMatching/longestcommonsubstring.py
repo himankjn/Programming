@@ -49,13 +49,13 @@ def commonsubstr(A,B,L,q,table):
 
     return -1
 
-def LCSubStr(A,B):
+def LCSubStr(A,B,q):
     n=len(A)
     m=len(B)
     #max substr length = min of two strings
     L=min(n,m)
     #prime q=1000 slots in hashtable.
-    q=1000
+  
 
     table={}
     x=commonsubstr(A,B,L,q,table)
@@ -64,7 +64,7 @@ def LCSubStr(A,B):
     start=0
     end=L
     
-    while(start<=end):
+    while(start<end):
         mid=(start+end)//2
         table.clear()
         if commonsubstr(A,B,mid,q,table)!=-1:
@@ -72,9 +72,26 @@ def LCSubStr(A,B):
         else:
             end=mid-1
     
-    return (start,commonsubstr(A,B,start,q,table))
+    return (end,commonsubstr(A,B,end,q,table))
     
-A="101010111010101100010"
-B="110101011000"
+import random
+import sys
+import math
 
-print(LCSubStr(A,B))
+n=random.randint(0,40)
+m=random.randint(0,40)
+A=""
+B=""
+
+for i in range(m):
+    A=A+str(random.randint(0,1))
+for i in range(n):
+    B=B+str(random.randint(0,1))
+
+print(A,B)
+q=pow(10,5)
+
+table={}
+
+ans=LCSubStr(A,B,q)
+print(ans)
