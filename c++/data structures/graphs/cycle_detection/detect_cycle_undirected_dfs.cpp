@@ -30,7 +30,7 @@ bool Graph::dfs(int V,bool Visited[],int parent){
     Visited[V]=true;
     for(auto it:edges[V]){//for all edges adjacent to V
         if(Visited[it] && it!=parent){
-            return true;
+            return true; 
         }
         else if(!Visited[it]&& dfs(it,Visited,V))return true;
     }
@@ -39,8 +39,9 @@ bool Graph::dfs(int V,bool Visited[],int parent){
 }
 bool Graph::is_cyclic(){//O(VE)
     bool Visited[100];
+    memset(Visited,false,sizeof(Visited)/sizeof(bool));
     for(int i=0;i<V;i++){
-        memset(Visited,false,sizeof(Visited)/sizeof(bool));
+        if(Visited[i])continue;
         if(dfs(i,Visited,-1))return true;
     }
     return false;
@@ -61,3 +62,36 @@ int main(){
     else cout<<"No cycle detected"<<endl;
     return 0;
 }
+
+
+/*
+
+        vector<int>indegree(numCourses,0);
+        queue<int>q;
+        vector<vector<int>>edges(numCourses,vector<int>());
+        
+        
+        for(auto it:prerequisites){
+            indegree[it[0]]++;
+            edges[it[1]].push_back(it[0]);
+        }
+        
+        for(int i=0;i<numCourses;i++){
+            if(indegree[i]==0)q.push(i);
+        }
+        
+        vector<int>fin;
+        while(!q.empty()){
+            int v=q.front();
+            q.pop();
+            fin.push_back(v);
+            for(auto u:edges[v]){
+                indegree[u]--;
+                if(indegree[u]==0)q.push(u);
+            }
+        }
+
+        if(fin.size()==V) no cycle
+        else cycle
+
+*/

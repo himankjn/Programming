@@ -162,6 +162,7 @@ void Graph:: djikstra(int src){
 
     heap.heapsize=V;
 
+    
     while(heap.heapsize!=0){
         MinHeapNode cur_node= heap.extract_min();
         int cur_vertex=cur_node.vertex;
@@ -178,6 +179,7 @@ void Graph:: djikstra(int src){
                 }  
         }
     }
+    
     for (int i = 0; i < V; ++i) 
         printf("%d \t\t %d\n", i, dist[i]); 
     
