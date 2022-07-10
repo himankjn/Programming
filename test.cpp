@@ -1,11 +1,8 @@
-#include<stdio.h>
 #include<iostream>
-#include<ctype.h>
 using namespace std;
-
 int main(){
-
-printf("%d",isdigit('a'));
-
+    for(int i=0;1;i++){
+        cout<<"hello";
+    }
     return 0;
 }
