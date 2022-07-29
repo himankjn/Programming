@@ -1,6 +1,7 @@
+package multithreading;
 // Java code for thread creation by extending
 // the Thread class
-class MultithreadingDemo extends Thread {
+class MultithreadingDemo1 extends Thread {
 	public void run()
 	{
 		try {

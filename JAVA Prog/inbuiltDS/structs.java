@@ -42,7 +42,7 @@ class structs{
         A.remove(1);//idx
         A.size();
         //arraylist to array of objects
-        Object B[]=A.toArray();
+        //Object B[]=A.toArray();
     
         
         //hashmap

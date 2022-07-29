@@ -1,5 +1,6 @@
 // Java code for thread creation by implementing
 // the Runnable Interface
+package multithreading;
 class MultithreadingDemo implements Runnable {
 	public void run()
 	{

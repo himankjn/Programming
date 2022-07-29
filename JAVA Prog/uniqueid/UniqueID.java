@@ -1,3 +1,4 @@
+package uniqueid;
 import java.util.HashMap;
 import java.util.Random;
 

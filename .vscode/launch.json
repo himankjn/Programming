@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch objectlock",
+            "request": "launch",
+            "mainClass": "multithreading.objectlock",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
+            "name": "Launch structs",
+            "request": "launch",
+            "mainClass": "structs",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
+            "name": "Launch UniqueID",
+            "request": "launch",
+            "mainClass": "uniqueid.UniqueID",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
+            "name": "Launch multithreading_runnable",
+            "request": "launch",
+            "mainClass": "multithreading.multithreading_runnable",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
+            "name": "Launch classlock",
+            "request": "launch",
+            "mainClass": "multithreading.classlock",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Geek",
+            "request": "launch",
+            "mainClass": "multithreading.Geek",
+            "projectName": "Programming_5ea476c"
+        },
+        {
+            "type": "java",
             "name": "Launch multithreading_runnable",
             "request": "launch",
             "mainClass": "multithreading_runnable",
@@ -53,6 +95,57 @@
                 }
             ],
             "preLaunchTask": "C/C++: cpp.exe build active file"
+        },
+        {
+            "name": "C/C++: gcc.exe build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: gcc.exe build active file"
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "enter program name, for example ${workspaceFolder}/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/path/to/gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ]
         }
     ],
     "version": "2.0.0"
